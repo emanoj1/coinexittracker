@@ -48,6 +48,12 @@ const Home = () => {
     <div className="container">
       <h2>Welcome!</h2>
 
+      <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
+        <strong>Coin Exit Tracker</strong> helps you plan your cryptocurrency sell strategy with confidence.
+        Enter the average price you paid and how many coins you hold to see your potential profits across 1x to 25x multipliers.
+        Choose your currency, select your coin, and visualize your exit plan — all in one place.
+      </p>
+
       <form>
         <div className="form-group">
           <label>Select Coin:</label>
