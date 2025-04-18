@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ExitTable from '../components/ExitTable';
 import { getLivePrice } from '../api';
-import '../App.css'; // Make sure you’ve imported your CSS
+import '../App.css';
 
 const Home = () => {
   const [coinId, setCoinId] = useState('bitcoin');
@@ -46,7 +46,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h2>Crypto Exit Tracker</h2>
+      <h2>Welcome!</h2>
 
       <form>
         <div className="form-group">

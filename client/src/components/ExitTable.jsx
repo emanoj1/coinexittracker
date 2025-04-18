@@ -30,10 +30,10 @@ const ExitTable = ({ avgPrice, coinQty, currencySymbol }) => {
       <tbody>
         {rows.map((r) => (
           <tr key={r.multiplier}>
-            <td>{r.multiplier}x</td>
-            <td>{currencySymbol}{r.exitPrice}</td>
-            <td>{currencySymbol}{r.totalValue}</td>
-            <td>{currencySymbol}{r.profit}</td>
+            <td data-label="Multiplier">{r.multiplier}x</td>
+            <td data-label="Price per Coin">{currencySymbol}{r.exitPrice}</td>
+            <td data-label="Total Value">{currencySymbol}{r.totalValue}</td>
+            <td data-label="Net Profit">{currencySymbol}{r.profit}</td>
           </tr>
         ))}
       </tbody>
