@@ -21,8 +21,8 @@ const ExitTable = ({ avgPrice, coinQty, currencySymbol }) => {
     <table border="1" cellPadding={10} style={{ marginTop: '20px' }}>
       <thead>
         <tr>
-          <th>x</th>
-          <th>Price per Coin</th>
+          <th>Exit Multiplier</th>
+          <th>Target Price per Coin</th>
           <th>Total Value</th>
           <th>Net Profit</th>
         </tr>
