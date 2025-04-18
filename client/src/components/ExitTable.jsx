@@ -1,13 +1,14 @@
 import React from 'react';
 
-const ExitTable = ({ avgPrice, totalSpent, livePrice, currencySymbol }) => {
-  const coinQty = totalSpent / avgPrice;
+const ExitTable = ({ avgPrice, coinQty, currencySymbol }) => {
+  const totalSpent = avgPrice * coinQty;
 
   const rows = Array.from({ length: 25 }, (_, i) => {
     const multiplier = i + 1;
     const exitPrice = avgPrice * multiplier;
     const totalValue = exitPrice * coinQty;
     const profit = totalValue - totalSpent;
+
     return {
       multiplier,
       exitPrice: exitPrice.toFixed(4),
@@ -41,3 +42,4 @@ const ExitTable = ({ avgPrice, totalSpent, livePrice, currencySymbol }) => {
 };
 
 export default ExitTable;
+
