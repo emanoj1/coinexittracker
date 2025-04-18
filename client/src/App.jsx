@@ -17,13 +17,19 @@ const App = () => (
         backgroundColor: '#fff'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/CoinExitTracker-logo1.png" alt="Coin Exit Tracker" style={{ height: '40px', marginRight: '10px' }} />
-          
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img
+            src="/CoinExitTracker-logo1.png"
+            alt="Coin Exit Tracker"
+            style={{ height: '40px', marginRight: '10px' }}
+            />
+          </Link>
         </div>
+
         <nav style={{ fontWeight: '600' }}>
-          <Link to="/" style={{ marginRight: '15px' }}>Home</Link>
           <Link to="/about">About</Link>
         </nav>
+
       </header>
 
       <Routes>
