@@ -1,7 +1,12 @@
+// React and core library imports
 import React, { useState, useEffect } from 'react';
+import Select from 'react-select';
+
+// Local files (API, components, styles, etc.)
 import ExitTable from '../components/ExitTable';
 import { getLivePrice } from '../api';
 import '../App.css';
+
 
 const getRelativeTime = (pastTime) => {
   const diff = Math.floor((Date.now() - pastTime.getTime()) / 1000); // in seconds
@@ -14,7 +19,7 @@ const getRelativeTime = (pastTime) => {
 
 const Home = () => {
   const [coinId, setCoinId] = useState('bitcoin');
-  const [coinList, setCoinList] = useState([]);
+  const [coinOptions, setCoinOptions] = useState([]);
   const [avgPrice, setAvgPrice] = useState('');
   const [coinQty, setCoinQty] = useState('');
   const [livePrice, setLivePrice] = useState(null);
@@ -38,10 +43,19 @@ const Home = () => {
     const fetchCoins = async () => {
       const res = await fetch('https://api.coingecko.com/api/v3/coins/list');
       const data = await res.json();
-      setCoinList(data);
+  
+      // Format for react-select
+      const options = data.map((coin) => ({
+        value: coin.id,
+        label: `${coin.name} (${coin.symbol.toUpperCase()})`
+      }));
+  
+      setCoinOptions(options); // new state
     };
+  
     fetchCoins();
   }, []);
+  
 
   const fetchPrice = async () => {
     const price = await getLivePrice(coinId, currency);
@@ -69,13 +83,13 @@ const Home = () => {
       <form>
         <div className="form-group">
           <label>Select Coin:</label>
-          <select value={coinId} onChange={(e) => setCoinId(e.target.value)}>
-            {coinList.map((coin) => (
-              <option key={coin.id} value={coin.id}>
-                {coin.name} ({coin.symbol.toUpperCase()})
-              </option>
-            ))}
-          </select>
+          <Select
+          options={coinOptions}
+          value={coinOptions.find((opt) => opt.value === coinId)}
+          onChange={(selectedOption) => setCoinId(selectedOption.value)}
+          placeholder="Search coin by name or symbol..."
+          isSearchable
+          />
         </div>
 
         <div className="form-group">
