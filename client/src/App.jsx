@@ -43,6 +43,10 @@ const App = () => {
             <img src="/coingecko-logo.avif" alt="Powered by CoinGecko" style={{ height: '60px', opacity: 1 }} />
           </a>
           <p style={{ fontWeight: '600', marginTop: '0.5rem' }}>Coin Exit Tracker | 2025</p>
+
+            {/* Counter will render inside this container */}
+            <div id="visitor-counter" style={{ marginTop: '0.5rem' }}></div>
+          
         </footer>
       </div>
     </Router>
