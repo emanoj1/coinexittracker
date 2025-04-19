@@ -4,11 +4,45 @@ const About = () => (
   <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
     <h2>About This Web App</h2>
     <p>
-      Coin Exit Tracker helps investors estimate their potential profits by visualizing coin exit prices across 1x to 25x multipliers.
+      Coin Exit Tracker helps crypto investors estimate their potential profits by visualizing coin exit prices across 1x to 25x multipliers.
     </p>
     <p>
       All data remains in your session and nothing is stored. Prices are powered by CoinGecko API.
     </p>
+
+    <h2>How the Calculations Work</h2>
+
+<p><strong>1. Average Price Paid per Coin</strong><br />
+To calculate this, divide the total amount you spent on a coin by the number of coins you hold.  
+<br />
+<i>Formula: </i>  
+<code>Average Price = Total Amount Spent ÷ Number of Coins Held</code><br />
+Example: If you spent $500 to buy 100 coins, your average price per coin is $5.00.
+</p>
+
+<p><strong>2. Target Price (x Multiplier)</strong><br />
+This shows what the price per coin would be if it increased by 1x, 2x, 3x... all the way up to 25x from your average price.<br />
+<i>Formula: </i>  
+<code>Target Price = Average Price × Multiplier</code><br />
+Example: If your average price is $5 and you're looking at the 3x row, the target price is $15.
+</p>
+
+<p><strong>3. Total Value</strong><br />
+This shows what your entire holding would be worth at that target price.<br />
+<i>Formula: </i>  
+<code>Total Value = Target Price × Number of Coins Held</code><br />
+Example: At a $15 price and 100 coins, your total value would be $1,500.
+</p>
+
+<p><strong>4. Net Profit</strong><br />
+This subtracts your original cost (total amount spent) from the potential value to show your profit.<br />
+<i>Formula: </i>  
+<code>Profit = Total Value − Total Amount Spent</code><br />
+Example: If your total value is $1,500 and you originally spent $500, your profit is $1,000.
+</p>
+
+<p>This tracker helps you visualize how much you could potentially earn at different exit levels, using simple math.</p>
+
 
     <h2>About the Creator</h2>
 

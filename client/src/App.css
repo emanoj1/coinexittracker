@@ -150,6 +150,15 @@ body {
     margin-top: 0.5rem;
     font-weight: 600;
   }
+
+  /* Styling for Calculations info */
+  code {
+    background-color: #25ffff57;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  
   
   
   
