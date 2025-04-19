@@ -83,9 +83,17 @@ const Home = () => {
           <input
             type="number"
             step="any"
+            min="0"
             value={avgPrice}
             onChange={(e) => setAvgPrice(e.target.value)}
+            style={{
+              MozAppearance: 'textfield',
+              WebkitAppearance: 'none',
+              margin: 0
+            }}
+            onWheel={(e) => e.target.blur()} // disables scroll up/down
           />
+
         </div>
 
         <div className="form-group">
@@ -102,8 +110,15 @@ const Home = () => {
           <input
             type="number"
             step="any"
+            min="0"
             value={coinQty}
             onChange={(e) => setCoinQty(e.target.value)}
+            style={{
+              MozAppearance: 'textfield',
+              WebkitAppearance: 'none',
+              margin: 0
+            }}
+            onWheel={(e) => e.target.blur()} // disables scroll increment/decrement
           />
         </div>
 
