@@ -71,7 +71,9 @@ Example: If your total value is $1,500 and you originally spent $500, your profi
     <p>
       Whether it’s through tech or creativity, Manoj loves exploring different ways to engage with the world and hopes his projects help make life a little more fun, thoughtful, and practical.
     </p>
-    <p>Support him to continue building this web app via his "Buy Me a Coffee" page.</p>
+    <p>
+      Support him to continue building this web app via his <a href="https://buymeacoffee.com/emanoj" target="_blank" rel="noopener noreferrer">Buy Me a Coffee page.</a>
+    </p>
 
     <h2>Contact</h2>
     <p>
