@@ -97,8 +97,6 @@ const Home = () => {
           </p>
         </div>
 
-        
-
         <div className="form-group">
           <label>Number of Coins Held:</label>
           <input
