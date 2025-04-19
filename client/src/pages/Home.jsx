@@ -3,6 +3,15 @@ import ExitTable from '../components/ExitTable';
 import { getLivePrice } from '../api';
 import '../App.css';
 
+const getRelativeTime = (pastTime) => {
+  const diff = Math.floor((Date.now() - pastTime.getTime()) / 1000); // in seconds
+
+  if (diff < 60) return `${diff} second${diff !== 1 ? 's' : ''} ago`;
+  if (diff < 3600) return `${Math.floor(diff / 60)} minute${diff < 120 ? '' : 's'} ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)} hour${diff < 7200 ? '' : 's'} ago`;
+  return `${Math.floor(diff / 86400)} day${diff < 172800 ? '' : 's'} ago`;
+};
+
 const Home = () => {
   const [coinId, setCoinId] = useState('bitcoin');
   const [coinList, setCoinList] = useState([]);
@@ -10,6 +19,7 @@ const Home = () => {
   const [coinQty, setCoinQty] = useState('');
   const [livePrice, setLivePrice] = useState(null);
   const [currency, setCurrency] = useState('usd');
+  const [lastUpdated, setLastUpdated] = useState(null);
 
   const currencySymbols = {
     usd: '$',
@@ -36,6 +46,7 @@ const Home = () => {
   const fetchPrice = async () => {
     const price = await getLivePrice(coinId, currency);
     setLivePrice(price);
+    setLastUpdated(new Date());
   };
 
   const reset = () => {
@@ -122,6 +133,24 @@ const Home = () => {
           <p style={{ marginTop: '2rem' }}>
             🔄 Live Price ({coinId.toUpperCase()} in {currency.toUpperCase()}): {currencySymbols[currency]}{livePrice}
           </p>
+          {lastUpdated && (
+          <div style={{
+            fontSize: '0.9rem',
+            color: '#555',
+            backgroundColor: '#f9f9f9',
+            padding: '0.75rem 1rem',
+            marginTop: '0.75rem',
+            border: '1px solid #e0e0e0',
+            borderRadius: '6px',
+            }}>
+              Last updated: <strong>{lastUpdated.toLocaleString()}</strong>  
+              <span style={{ marginLeft: '10px', color: '#888' }}>({getRelativeTime(lastUpdated)})</span><br />
+              <span style={{ fontStyle: 'italic' }}>
+                Click the <strong>GET LIVE PRICE</strong> button above to refresh price.
+                </span>
+                </div>
+              )}
+
           <ExitTable
             avgPrice={parseFloat(avgPrice)}
             coinQty={parseFloat(coinQty)}
