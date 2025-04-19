@@ -20,9 +20,9 @@ const App = () => {
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
               <img
-                src="/checkmark_logo2_cet.png"
+                src="/tick-logo-cet.png"
                 alt="Coin Exit Tracker"
-                style={{ height: '40px', marginRight: '10px' }}
+                style={{ height: '50px', marginRight: '10px' }}
               />
             </Link>
           </div>
