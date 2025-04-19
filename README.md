@@ -1,8 +1,7 @@
-# 📈 Coin Exit Tracker
+# 📈 About
+![Coin Exit Tracker Logo](./client/public/tick-logo-cet.png)
 
 **Coin Exit Tracker** is a clean, responsive web app that helps crypto investors forecast potential profits across 1x to 25x price multipliers. Just enter your average price per coin and quantity, and get an instant profit breakdown — powered by live CoinGecko data.
-
-![Coin Exit Tracker Logo](public/tick-logo-cet.png)
 
 ---
 
