@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => (
   <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
-    <h2>About This Web App</h2>
+    <h2>About</h2>
     <p>
       Coin Exit Tracker helps crypto investors estimate their potential profits by visualizing coin exit prices across 1x to 25x multipliers.
     </p>
@@ -10,7 +10,7 @@ const About = () => (
       All data remains in your session and nothing is stored. Prices are powered by CoinGecko API.
     </p>
 
-    <h2>How the Calculations Work</h2>
+    <h3>How the Calculations Work</h3>
 
 <p><strong>1. Average Price Paid per Coin</strong><br />
 To calculate this, divide the total amount you spent on a coin by the number of coins you hold.  
@@ -44,7 +44,7 @@ Example: If your total value is $1,500 and you originally spent $500, your profi
 <p>This tracker helps you visualize how much you could potentially earn at different exit levels, using simple math.</p>
 
 
-    <h2>About the Creator</h2>
+    <h2>The Creator</h2>
 
     <img
       src="/ManojPolaroidBio.png"
@@ -71,7 +71,14 @@ Example: If your total value is $1,500 and you originally spent $500, your profi
     <p>
       Whether it’s through tech or creativity, Manoj loves exploring different ways to engage with the world and hopes his projects help make life a little more fun, thoughtful, and practical.
     </p>
-    <p>Support him to continue building this web app via the "Buy Me a Coffee" link below.</p>
+    <p>Support him to continue building this web app via his "Buy Me a Coffee" page.</p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have any comments, suggestions, or issues, please contact me via <a href="https://tally.so/r/w8qkjP" target="_blank" rel="noopener noreferrer">this contact form</a>.
+
+    </p>
+
   </div>
 );
 
