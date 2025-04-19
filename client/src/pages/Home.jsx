@@ -62,8 +62,9 @@ const Home = () => {
       <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
         <strong>Coin Exit Tracker</strong> helps you plan your cryptocurrency sell strategy with confidence.
         Enter the average price you paid and how many coins you hold to see your potential profits across 1x to 25x multipliers.
-        Choose your currency, select your coin, and visualize your exit plan — all in one place.
+        Choose your currency, select your coin, and visualize your exit plan — all in one place. But as they say: DYOR!
       </p>
+      <p>Let's begin! Input details below:</p>
 
       <form>
         <div className="form-group">
@@ -86,6 +87,17 @@ const Home = () => {
             onChange={(e) => setAvgPrice(e.target.value)}
           />
         </div>
+
+        <div className="form-group">
+          <p className="note">
+            <strong>Note:</strong> This tool does not convert currency values.
+            Please ensure the average price you enter is in the selected currency.
+            For example, if your average price was AUD 10 and you want to see results in USD,
+            convert AUD 10 to USD first.
+          </p>
+        </div>
+
+        
 
         <div className="form-group">
           <label>Number of Coins Held:</label>
@@ -111,15 +123,6 @@ const Home = () => {
             <option value="brl">BRL</option>
             <option value="zar">ZAR</option>
           </select>
-        </div>
-
-        <div className="form-group">
-          <p className="note">
-            <strong>Note:</strong> This tool does not convert currency values.
-            Please ensure the average price you enter is in the selected currency.
-            For example, if your average price was AUD 10 and you want to see results in USD,
-            convert AUD 10 to USD first.
-          </p>
         </div>
 
         <div>
