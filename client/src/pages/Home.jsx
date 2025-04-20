@@ -78,6 +78,7 @@ const Home = () => {
         Enter the average price you paid and how many coins you hold to see your potential profits across 1x to 25x multipliers.
         Choose your currency, select your coin, and visualize your exit plan — all in one place. But as they say: DYOR!
       </p>
+
       <p>Let's begin! Input details below:</p>
 
       <form>

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+import Calculator from './pages/Calculator';
 import './App.css';
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           </div>
 
           <nav style={{ fontWeight: '600' }}>
+            <Link to="/calculator" style={{ marginRight: '15px' }}>Custom Sell Calculator</Link>
             <Link to="/about">About</Link>
           </nav>
         </header>
@@ -35,6 +37,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/calculator" element={<Calculator />} />
         </Routes>
 
         {/* CoinGecko Attribution */}
