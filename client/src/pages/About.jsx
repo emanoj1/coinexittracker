@@ -7,7 +7,7 @@ const About = () => (
       Coin Exit Tracker helps crypto investors estimate their potential profits by visualizing coin exit prices across 1x to 25x multipliers.
     </p>
     <p>
-      All data remains in your session and nothing is stored. Prices are powered by CoinGecko API.
+      All data remains in your session and nothing is stored. LIVE prices are powered by CoinGecko API.
     </p>
 
     <h3>How the Calculations Work</h3>
@@ -41,7 +41,29 @@ This subtracts your original cost (total amount spent) from the potential value 
 Example: If your total value is $1,500 and you originally spent $500, your profit is $1,000.
 </p>
 
-<p>This tracker helps you visualize how much you could potentially earn at different exit levels, using simple math.</p>
+<p><strong>5. Profit %</strong><br />
+This shows the percentage gain you would make at each multiplier level if you sold your coins at that target price.  
+<br />
+<i>Formula:</i><br />
+<code>Profit % = ((Target Value − Total Cost) ÷ Total Cost) × 100</code><br />
+Example: If you bought 100 coins at $2 each (total cost = $200), and the target price is $6,  
+then your total value is $600, and your profit is $400.<br />
+Profit % = (400 ÷ 200) × 100 = <strong>200%</strong>
+</p>
+
+<p><strong>6. Progress</strong><br />
+This shows how close the current market price is to reaching the target price for that multiplier level.  
+<br />
+<i>Formula:</i><br />
+<code>Progress = (Live Price ÷ Target Price) × 100</code><br />
+Example: If your 3x target price is $9 and the current market price is $6,  
+then Progress = (6 ÷ 9) × 100 = <strong>66.67%</strong>  
+<br />
+Note: If the progress exceeds 100%, it is capped and shown as 100%.
+</p>
+
+
+<p></p>
 
 
     <h2>The Creator</h2>
