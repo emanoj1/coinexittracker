@@ -158,6 +158,34 @@ body {
     border-radius: 4px;
     font-size: 0.95rem;
   }
+
+  /* ExitTable.css */
+.exit-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.exit-table th, .exit-table td {
+  padding: 8px 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.progress-bar-container {
+  background: #eee;
+  height: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  height: 6px;
+  transition: width 0.3s ease;
+}
+
   
   
   

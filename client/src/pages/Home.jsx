@@ -160,9 +160,19 @@ const Home = () => {
 
       {livePrice && (
         <>
-          <p style={{ marginTop: '2rem' }}>
-            🔄 Live Price ({coinId.toUpperCase()} in {currency.toUpperCase()}): {currencySymbols[currency]}{livePrice}
-          </p>
+        <p style={{ marginTop: '2rem' }}>
+          🔄 Live Price data from CoinGecko ({coinId.toUpperCase()} in {currency.toUpperCase()}):  
+          <span style={{
+            fontWeight: 'bold',
+            color: '#2e7d32',         // Deep green color
+            fontSize: '1.15rem',
+            marginLeft: '8px',
+            display: 'inline-block'
+            }}>
+              {currencySymbols[currency]}{livePrice}
+          </span>
+        </p>
+
           {lastUpdated && (
           <div style={{
             fontSize: '0.9rem',
@@ -180,12 +190,24 @@ const Home = () => {
                 </span>
                 </div>
               )}
+              
+              <ExitTable
+              avgPrice={parseFloat(avgPrice)}
+              coinQty={parseFloat(coinQty)}
+              currencySymbol={currencySymbols[currency]}
+              livePrice={parseFloat(livePrice)}
+              />
+              
+<p style={{ marginTop: '1.5rem', fontSize: '0.95rem', textAlign: 'center' }}>
+  📘 Check the <a
+    href="/about"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: '#1976d2', textDecoration: 'none', fontWeight: 'bold' }}
+  >About</a> page for formulas and explanations.
+</p>
 
-          <ExitTable
-            avgPrice={parseFloat(avgPrice)}
-            coinQty={parseFloat(coinQty)}
-            currencySymbol={currencySymbols[currency]}
-          />
+
         </>
       )}
     </div>

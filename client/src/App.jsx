@@ -40,7 +40,7 @@ const App = () => {
         {/* CoinGecko Attribution */}
         <footer style={{ textAlign: 'center', padding: '2rem 0', marginTop: '3rem' }}>
           <a href="https://www.coingecko.com" target="_blank" rel="noopener noreferrer">
-            <img src="/coingecko-logo.avif" alt="Powered by CoinGecko" style={{ height: '60px', opacity: 1 }} />
+            <img src="/pricedata-coingecko.png" alt="Powered by CoinGecko" style={{ height: '60px', opacity: 1 }} />
           </a>
           <p style={{ fontWeight: '600', marginTop: '0.5rem' }}>Coin Exit Tracker | 2025</p>
           
