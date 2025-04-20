@@ -186,6 +186,42 @@ body {
   transition: width 0.3s ease;
 }
 
+@media screen and (max-width: 768px) {
+  .exit-table table, .exit-table thead, .exit-table tbody, .exit-table th, .exit-table td, .exit-table tr {
+    display: block;
+  }
+
+  .exit-table thead {
+    display: none;
+  }
+
+  .exit-table td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  .exit-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+  }
+
+  .exit-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    background: #fff;
+  }
+}
+
   
   
   

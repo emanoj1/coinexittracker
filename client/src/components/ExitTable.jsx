@@ -32,19 +32,19 @@ const ExitTable = ({ avgPrice, coinQty, currencySymbol, livePrice }) => {
 
             return (
               <tr key={multiplier}>
-                <td>{multiplier}x</td>
-                <td>{currencySymbol}{targetPrice.toFixed(2)}</td>
-                <td>{currencySymbol}{totalValue.toFixed(2)}</td>
-                <td>{currencySymbol}{profit.toFixed(2)}</td>
-                <td>{Math.floor(profitPercent)}%</td>
-                <td style={{ minWidth: '120px' }}>
+                <td data-label="Multiplier">{multiplier}x</td>
+                <td data-label="Target Price">{currencySymbol}{targetPrice.toFixed(2)}</td>
+                <td data-label="Total Value">{currencySymbol}{totalValue.toFixed(2)}</td>
+                <td data-label="Profit">{currencySymbol}{profit.toFixed(2)}</td>
+                <td data-label="Profit %">{Math.floor(profitPercent)}%</td>
+                <td data-label="Progress" style={{ minWidth: '120px' }}>
                   <div className="progress-bar-container">
                     <div
                       className="progress-bar"
                       style={{ width: `${progress}%`, backgroundColor: progressColor }}
                     />
                   </div>
-                  <small>{progress.toFixed(1)}%</small>
+                  <small>{progress.toFixed(2)}%</small>
                 </td>
               </tr>
             );
@@ -56,3 +56,4 @@ const ExitTable = ({ avgPrice, coinQty, currencySymbol, livePrice }) => {
 };
 
 export default ExitTable;
+
